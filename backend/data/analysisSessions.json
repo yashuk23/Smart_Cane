@@ -1,0 +1,2902 @@
+[
+  {
+    "_id": "id_1793901074275_xiz9gm",
+    "createdAt": "2026-11-05T17:51:14.275Z",
+    "updatedAt": "2026-11-05T17:51:14.275Z",
+    "userId": "id_1793900611354_hve0se",
+    "fieldId": "id_1793900788104_wgwyos",
+    "fieldName": "North-west",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Sandy",
+    "cropGrowthStage": "Vegetative",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "DAP",
+      "confidence": 0.9999,
+      "confidence_percentage": 100,
+      "probabilities": {
+        "Compost": 0,
+        "DAP": 0.9999,
+        "MOP": 0,
+        "NPK": 0,
+        "SSP": 0,
+        "Urea": 0,
+        "Zinc Sulphate": 0
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "DAP",
+      "nutrient_supplied": "Nitrogen + Phosphorus (N-P)",
+      "description": "Di-Ammonium Phosphate (18-46-0) supplies both nitrogen and phosphorus. Ideal for basal application before planting or early growth.",
+      "application_instructions": "Apply at the base of the plant. Mix into soil during field preparation.",
+      "dosage_kg_per_ha": 80,
+      "total_dosage_kg": 120,
+      "field_area_ha": 1.5,
+      "confidence": 0.9999,
+      "confidence_percentage": 100,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 20.582,
+          "electrical_conductivity": 1,
+          "nitrogen_level": 111.588,
+          "phosphorus_level": 11.845,
+          "potassium_level": 249.328
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 20.582,
+            "rawMean": 20.58,
+            "rawValues": [
+              21,
+              20.5,
+              20.5,
+              20.5,
+              20.4
+            ],
+            "filteredSteps": [
+              21,
+              20.769,
+              20.681,
+              20.634,
+              20.582
+            ],
+            "noiseReductionPct": 52.6,
+            "history": [
+              {
+                "measurement": 21,
+                "estimate": 21,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 20.5,
+                "estimate": 20.769,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 20.5,
+                "estimate": 20.6809,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 20.5,
+                "estimate": 20.6337,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 20.4,
+                "estimate": 20.5818,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 1,
+            "rawMean": 1,
+            "rawValues": [
+              1,
+              0.99,
+              1.02,
+              1,
+              0.99
+            ],
+            "filteredSteps": [
+              1,
+              0.995,
+              1.003,
+              1.002,
+              1
+            ],
+            "noiseReductionPct": 93.5,
+            "history": [
+              {
+                "measurement": 1,
+                "estimate": 1,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.99,
+                "estimate": 0.9954,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 1.02,
+                "estimate": 1.0034,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 1,
+                "estimate": 1.0025,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.99,
+                "estimate": 0.9998,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 111.588,
+            "rawMean": 111.56,
+            "rawValues": [
+              114,
+              111.1,
+              110,
+              112.1,
+              110.6
+            ],
+            "filteredSteps": [
+              114,
+              112.66,
+              111.789,
+              111.87,
+              111.588
+            ],
+            "noiseReductionPct": 59.8,
+            "history": [
+              {
+                "measurement": 114,
+                "estimate": 114,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 111.1,
+                "estimate": 112.66,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 110,
+                "estimate": 111.7887,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 112.1,
+                "estimate": 111.8698,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 110.6,
+                "estimate": 111.5877,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 11.845,
+            "rawMean": 11.84,
+            "rawValues": [
+              12,
+              11.7,
+              11.9,
+              11.7,
+              11.9
+            ],
+            "filteredSteps": [
+              12,
+              11.861,
+              11.874,
+              11.829,
+              11.845
+            ],
+            "noiseReductionPct": 74.1,
+            "history": [
+              {
+                "measurement": 12,
+                "estimate": 12,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 11.7,
+                "estimate": 11.8614,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 11.9,
+                "estimate": 11.874,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 11.7,
+                "estimate": 11.8287,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 11.9,
+                "estimate": 11.8445,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 249.328,
+            "rawMean": 249.46,
+            "rawValues": [
+              250,
+              249.1,
+              254.1,
+              248.6,
+              245.5
+            ],
+            "filteredSteps": [
+              250,
+              249.584,
+              251.063,
+              250.421,
+              249.328
+            ],
+            "noiseReductionPct": 95,
+            "history": [
+              {
+                "measurement": 250,
+                "estimate": 250,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 249.1,
+                "estimate": 249.5841,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 254.1,
+                "estimate": 251.0633,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 248.6,
+                "estimate": 250.4212,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 245.5,
+                "estimate": 249.3278,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Sandy",
+      "soil_moisture": 20.582,
+      "electrical_conductivity": 1,
+      "nitrogen_level": 111.588,
+      "phosphorus_level": 11.845,
+      "potassium_level": 249.328,
+      "temperature": 24.3,
+      "humidity": 49,
+      "irrigation_type": "Drip"
+    },
+    "metadata": {
+      "fieldName": "North-west",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Sandy",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip"
+    }
+  },
+  {
+    "_id": "id_1793900959653_uf2qol",
+    "createdAt": "2026-11-05T17:49:19.653Z",
+    "updatedAt": "2026-11-05T17:49:19.653Z",
+    "userId": "id_1793900611354_hve0se",
+    "fieldId": "id_1793900788104_wgwyos",
+    "fieldName": "North-west",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Clay",
+    "cropGrowthStage": "Vegetative",
+    "season": "Rabi",
+    "advisoryType": "water",
+    "irrigationPrediction": {
+      "irrigation_need": "Low",
+      "confidence": 0.8192,
+      "confidence_percentage": 81.9,
+      "probabilities": {
+        "High": 0.0049,
+        "Low": 0.8192,
+        "Medium": 0.1759
+      }
+    },
+    "waterAdvisory": {
+      "irrigation_need": "Low",
+      "irrigation_required": false,
+      "urgency": "No immediate irrigation needed",
+      "description": "Soil moisture is adequate. Monitor conditions and irrigate when moisture drops below threshold.",
+      "recommended_depth_mm": 0,
+      "total_water_litres": 0,
+      "frequency": "Check again in 7–10 days",
+      "field_area_ha": 1.5,
+      "confidence": 0.8192,
+      "confidence_percentage": 81.9,
+      "ml_source": "sugarcane_v2_model",
+      "weather_used": {
+        "temperature_c": 24.3,
+        "humidity": 49,
+        "wind_speed_kmh": 5
+      },
+      "important_notes": [
+        "Irrigate during early morning or evening to reduce evaporation.",
+        "Adjust irrigation based on rainfall received.",
+        "Monitor soil moisture with a tensiometer for precision irrigation."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_ph": 6.236,
+          "soil_moisture": 30.162,
+          "electrical_conductivity": 0.67
+        },
+        "details": {
+          "soil_ph": {
+            "filteredValue": 6.236,
+            "rawMean": 6.234,
+            "rawValues": [
+              6.2,
+              6.15,
+              6.23,
+              6.36,
+              6.23
+            ],
+            "filteredSteps": [
+              6.2,
+              6.177,
+              6.194,
+              6.237,
+              6.236
+            ],
+            "noiseReductionPct": 88.2,
+            "history": [
+              {
+                "measurement": 6.2,
+                "estimate": 6.2,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 6.15,
+                "estimate": 6.1769,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 6.23,
+                "estimate": 6.1943,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 6.36,
+                "estimate": 6.2375,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 6.23,
+                "estimate": 6.2358,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "soil_moisture": {
+            "filteredValue": 30.162,
+            "rawMean": 30.2,
+            "rawValues": [
+              28.9,
+              30.9,
+              30.8,
+              30.5,
+              29.9
+            ],
+            "filteredSteps": [
+              28.9,
+              29.824,
+              30.144,
+              30.237,
+              30.162
+            ],
+            "noiseReductionPct": 54.6,
+            "history": [
+              {
+                "measurement": 28.9,
+                "estimate": 28.9,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 30.9,
+                "estimate": 29.8242,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 30.8,
+                "estimate": 30.1438,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 30.5,
+                "estimate": 30.2366,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 29.9,
+                "estimate": 30.1618,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 0.67,
+            "rawMean": 0.672,
+            "rawValues": [
+              0.5,
+              0.72,
+              0.71,
+              0.72,
+              0.71
+            ],
+            "filteredSteps": [
+              0.5,
+              0.602,
+              0.637,
+              0.659,
+              0.67
+            ],
+            "noiseReductionPct": 49.2,
+            "history": [
+              {
+                "measurement": 0.5,
+                "estimate": 0.5,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.72,
+                "estimate": 0.6017,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.71,
+                "estimate": 0.6371,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.72,
+                "estimate": 0.6587,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.71,
+                "estimate": 0.6701,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_ph": 6.236,
+      "soil_moisture": 30.162,
+      "electrical_conductivity": 0.67,
+      "temperature_c": 24.3,
+      "humidity": 49,
+      "wind_speed_kmh": 5,
+      "irrigation_type": "Drip",
+      "season": "Rabi",
+      "crop_growth_stage": "Vegetative"
+    },
+    "metadata": {
+      "fieldName": "North-west",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Clay",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip",
+      "weather": {
+        "temperature_c": 24.3,
+        "humidity": 49,
+        "wind_speed_kmh": 5
+      }
+    }
+  },
+  {
+    "_id": "id_1793900859699_uulxns",
+    "createdAt": "2026-11-05T17:47:39.699Z",
+    "updatedAt": "2026-11-05T17:47:39.699Z",
+    "userId": "id_1793900611354_hve0se",
+    "fieldId": "id_1793900788104_wgwyos",
+    "fieldName": "North-west",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Clay",
+    "cropGrowthStage": "Vegetative",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "DAP",
+      "confidence": 0.9996,
+      "confidence_percentage": 100,
+      "probabilities": {
+        "Compost": 0,
+        "DAP": 0.9996,
+        "MOP": 0,
+        "NPK": 0,
+        "SSP": 0,
+        "Urea": 0,
+        "Zinc Sulphate": 0.0003
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "DAP",
+      "nutrient_supplied": "Nitrogen + Phosphorus (N-P)",
+      "description": "Di-Ammonium Phosphate (18-46-0) supplies both nitrogen and phosphorus. Ideal for basal application before planting or early growth.",
+      "application_instructions": "Apply at the base of the plant. Mix into soil during field preparation.",
+      "dosage_kg_per_ha": 80,
+      "total_dosage_kg": 120,
+      "field_area_ha": 1.5,
+      "confidence": 0.9996,
+      "confidence_percentage": 100,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 29.45,
+          "electrical_conductivity": 0.396,
+          "nitrogen_level": 120.592,
+          "phosphorus_level": 16.325,
+          "potassium_level": 128.546
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 29.45,
+            "rawMean": 29.4,
+            "rawValues": [
+              29,
+              28.4,
+              29.1,
+              29.9,
+              30.6
+            ],
+            "filteredSteps": [
+              29,
+              28.723,
+              28.846,
+              29.121,
+              29.45
+            ],
+            "noiseReductionPct": 89.3,
+            "history": [
+              {
+                "measurement": 29,
+                "estimate": 29,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 28.4,
+                "estimate": 28.7227,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 29.1,
+                "estimate": 28.8463,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 29.9,
+                "estimate": 29.121,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 30.6,
+                "estimate": 29.4496,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 0.396,
+            "rawMean": 0.396,
+            "rawValues": [
+              0.4,
+              0.39,
+              0.4,
+              0.39,
+              0.4
+            ],
+            "filteredSteps": [
+              0.4,
+              0.395,
+              0.397,
+              0.395,
+              0.396
+            ],
+            "noiseReductionPct": 87.1,
+            "history": [
+              {
+                "measurement": 0.4,
+                "estimate": 0.4,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.39,
+                "estimate": 0.3954,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.4,
+                "estimate": 0.3969,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.39,
+                "estimate": 0.3951,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.4,
+                "estimate": 0.3962,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 120.592,
+            "rawMean": 120.54,
+            "rawValues": [
+              121,
+              120.6,
+              118.3,
+              121.3,
+              121.5
+            ],
+            "filteredSteps": [
+              121,
+              120.815,
+              119.991,
+              120.332,
+              120.592
+            ],
+            "noiseReductionPct": 90.6,
+            "history": [
+              {
+                "measurement": 121,
+                "estimate": 121,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 120.6,
+                "estimate": 120.8152,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 118.3,
+                "estimate": 119.9913,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 121.3,
+                "estimate": 120.3324,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 121.5,
+                "estimate": 120.5919,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 16.325,
+            "rawMean": 16.3,
+            "rawValues": [
+              16,
+              15.9,
+              16.1,
+              16.5,
+              17
+            ],
+            "filteredSteps": [
+              16,
+              15.954,
+              16.002,
+              16.132,
+              16.325
+            ],
+            "noiseReductionPct": 88.9,
+            "history": [
+              {
+                "measurement": 16,
+                "estimate": 16,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 15.9,
+                "estimate": 15.9538,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 16.1,
+                "estimate": 16.0017,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 16.5,
+                "estimate": 16.1316,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 17,
+                "estimate": 16.3245,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 128.546,
+            "rawMean": 128.6,
+            "rawValues": [
+              125,
+              128.6,
+              131,
+              129.8,
+              128.6
+            ],
+            "filteredSteps": [
+              125,
+              126.663,
+              128.084,
+              128.531,
+              128.547
+            ],
+            "noiseReductionPct": 53.6,
+            "history": [
+              {
+                "measurement": 125,
+                "estimate": 125,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 128.6,
+                "estimate": 126.6635,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 131,
+                "estimate": 128.0839,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 129.8,
+                "estimate": 128.5312,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 128.6,
+                "estimate": 128.5465,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_moisture": 29.45,
+      "electrical_conductivity": 0.396,
+      "nitrogen_level": 120.592,
+      "phosphorus_level": 16.325,
+      "potassium_level": 128.546,
+      "temperature": 24.3,
+      "humidity": 49,
+      "irrigation_type": "Drip"
+    },
+    "metadata": {
+      "fieldName": "North-west",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Clay",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip"
+    }
+  },
+  {
+    "_id": "id_1793899615332_ueux5i",
+    "createdAt": "2026-11-05T17:26:55.332Z",
+    "updatedAt": "2026-11-05T17:26:55.332Z",
+    "userId": "id_1793870527588_kwms95",
+    "fieldId": "id_1793892864977_lmu1o3",
+    "fieldName": "Centre",
+    "fieldAreaHectare": 0.43,
+    "soilType": "Sandy",
+    "cropGrowthStage": "Vegetative",
+    "season": "Zaid",
+    "advisoryType": "water",
+    "irrigationPrediction": {
+      "irrigation_need": "Low",
+      "confidence": 0.9088,
+      "confidence_percentage": 90.9,
+      "probabilities": {
+        "High": 0.0048,
+        "Low": 0.9088,
+        "Medium": 0.0863
+      }
+    },
+    "waterAdvisory": {
+      "irrigation_need": "Low",
+      "irrigation_required": false,
+      "urgency": "No immediate irrigation needed",
+      "description": "Soil moisture is adequate. Monitor conditions and irrigate when moisture drops below threshold.",
+      "recommended_depth_mm": 0,
+      "total_water_litres": 0,
+      "frequency": "Check again in 7–10 days",
+      "field_area_ha": 0.43,
+      "confidence": 0.9088,
+      "confidence_percentage": 90.9,
+      "ml_source": "sugarcane_v2_model",
+      "weather_used": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      },
+      "important_notes": [
+        "Irrigate during early morning or evening to reduce evaporation.",
+        "Adjust irrigation based on rainfall received.",
+        "Monitor soil moisture with a tensiometer for precision irrigation."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_ph": 7.141,
+          "soil_moisture": 50.876,
+          "electrical_conductivity": 1.806
+        },
+        "details": {
+          "soil_ph": {
+            "filteredValue": 7.141,
+            "rawMean": 7.142,
+            "rawValues": [
+              6.35,
+              7.22,
+              7.25,
+              7.42,
+              7.47
+            ],
+            "filteredSteps": [
+              6.35,
+              6.752,
+              6.915,
+              7.047,
+              7.141
+            ],
+            "noiseReductionPct": 53.4,
+            "history": [
+              {
+                "measurement": 6.35,
+                "estimate": 6.35,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 7.22,
+                "estimate": 6.752,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 7.25,
+                "estimate": 6.9151,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 7.42,
+                "estimate": 7.0467,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 7.47,
+                "estimate": 7.1408,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "soil_moisture": {
+            "filteredValue": 50.876,
+            "rawMean": 50.964,
+            "rawValues": [
+              46.22,
+              52.9,
+              52.3,
+              52.3,
+              51.1
+            ],
+            "filteredSteps": [
+              46.22,
+              49.307,
+              50.287,
+              50.812,
+              50.876
+            ],
+            "noiseReductionPct": 49.6,
+            "history": [
+              {
+                "measurement": 46.22,
+                "estimate": 46.22,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 52.9,
+                "estimate": 49.3067,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 52.3,
+                "estimate": 50.2871,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 52.3,
+                "estimate": 50.8118,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 51.1,
+                "estimate": 50.8758,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 1.806,
+            "rawMean": 1.802,
+            "rawValues": [
+              2.19,
+              1.71,
+              1.7,
+              1.72,
+              1.69
+            ],
+            "filteredSteps": [
+              2.19,
+              1.968,
+              1.88,
+              1.839,
+              1.806
+            ],
+            "noiseReductionPct": 49.6,
+            "history": [
+              {
+                "measurement": 2.19,
+                "estimate": 2.19,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 1.71,
+                "estimate": 1.9682,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 1.7,
+                "estimate": 1.8804,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 1.72,
+                "estimate": 1.8386,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 1.69,
+                "estimate": 1.8055,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Sandy",
+      "soil_ph": 7.141,
+      "soil_moisture": 50.876,
+      "electrical_conductivity": 1.806,
+      "temperature_c": 24.5,
+      "humidity": 48,
+      "wind_speed_kmh": 7.1,
+      "irrigation_type": "Sprinkler",
+      "season": "Zaid",
+      "crop_growth_stage": "Vegetative"
+    },
+    "metadata": {
+      "fieldName": "Centre",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Sandy",
+      "fieldAreaHectare": 0.43,
+      "irrigationType": "Sprinkler",
+      "weather": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      }
+    }
+  },
+  {
+    "_id": "id_1793899561540_0gal8r",
+    "createdAt": "2026-11-05T17:26:01.540Z",
+    "updatedAt": "2026-11-05T17:26:01.540Z",
+    "userId": "id_1793892646587_va997a",
+    "fieldId": "id_1793899294446_w6xbf5",
+    "fieldName": "West",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Clay",
+    "cropGrowthStage": "Sowing",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "Zinc Sulphate",
+      "confidence": 0.8433,
+      "confidence_percentage": 84.3,
+      "probabilities": {
+        "Compost": 0.046,
+        "DAP": 0.0092,
+        "MOP": 0.004,
+        "NPK": 0.0963,
+        "SSP": 0.0001,
+        "Urea": 0.001,
+        "Zinc Sulphate": 0.8433
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "Zinc Sulphate",
+      "nutrient_supplied": "Zinc (Zn)",
+      "description": "Zinc Sulphate corrects zinc micronutrient deficiency, which is common in sugarcane on alkaline soils.",
+      "application_instructions": "Foliar spray (0.5% solution) or soil application at 25 kg/ha.",
+      "dosage_kg_per_ha": 25,
+      "total_dosage_kg": 37.5,
+      "field_area_ha": 1.5,
+      "confidence": 0.8433,
+      "confidence_percentage": 84.3,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 51.306,
+          "electrical_conductivity": 1.753,
+          "nitrogen_level": 222.623,
+          "phosphorus_level": 51.065,
+          "potassium_level": 271.999
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 51.306,
+            "rawMean": 51,
+            "rawValues": [
+              55,
+              50,
+              45,
+              45,
+              60
+            ],
+            "filteredSteps": [
+              55,
+              52.69,
+              50.171,
+              48.823,
+              51.306
+            ],
+            "noiseReductionPct": 86.7,
+            "history": [
+              {
+                "measurement": 55,
+                "estimate": 55,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 50,
+                "estimate": 52.6896,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 45,
+                "estimate": 50.1709,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 45,
+                "estimate": 48.8231,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 60,
+                "estimate": 51.3064,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 1.753,
+            "rawMean": 1.72,
+            "rawValues": [
+              2,
+              2,
+              0.8,
+              0.8,
+              3
+            ],
+            "filteredSteps": [
+              2,
+              2,
+              1.607,
+              1.397,
+              1.753
+            ],
+            "noiseReductionPct": 92.2,
+            "history": [
+              {
+                "measurement": 2,
+                "estimate": 2,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 2,
+                "estimate": 2,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.8,
+                "estimate": 1.6069,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.8,
+                "estimate": 1.3966,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 3,
+                "estimate": 1.7529,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 222.623,
+            "rawMean": 222,
+            "rawValues": [
+              250,
+              250,
+              180,
+              180,
+              250
+            ],
+            "filteredSteps": [
+              250,
+              250,
+              227.072,
+              214.803,
+              222.623
+            ],
+            "noiseReductionPct": 82.1,
+            "history": [
+              {
+                "measurement": 250,
+                "estimate": 250,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 250,
+                "estimate": 250,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 180,
+                "estimate": 227.072,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 180,
+                "estimate": 214.8026,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 250,
+                "estimate": 222.6229,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 51.065,
+            "rawMean": 50,
+            "rawValues": [
+              50,
+              50,
+              30,
+              30,
+              90
+            ],
+            "filteredSteps": [
+              50,
+              50,
+              43.449,
+              39.944,
+              51.065
+            ],
+            "noiseReductionPct": 96,
+            "history": [
+              {
+                "measurement": 50,
+                "estimate": 50,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 50,
+                "estimate": 50,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 30,
+                "estimate": 43.4491,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 30,
+                "estimate": 39.9436,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 90,
+                "estimate": 51.0654,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 271.999,
+            "rawMean": 270,
+            "rawValues": [
+              300,
+              300,
+              200,
+              200,
+              350
+            ],
+            "filteredSteps": [
+              300,
+              300,
+              267.246,
+              249.718,
+              271.999
+            ],
+            "noiseReductionPct": 89.3,
+            "history": [
+              {
+                "measurement": 300,
+                "estimate": 300,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 300,
+                "estimate": 300,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 200,
+                "estimate": 267.2457,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 200,
+                "estimate": 249.718,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 350,
+                "estimate": 271.9991,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_moisture": 51.306,
+      "electrical_conductivity": 1.753,
+      "nitrogen_level": 222.623,
+      "phosphorus_level": 51.065,
+      "potassium_level": 271.999,
+      "temperature": 25,
+      "humidity": 45,
+      "irrigation_type": "Drip"
+    },
+    "metadata": {
+      "fieldName": "West",
+      "cropGrowthStage": "Sowing",
+      "soilType": "Clay",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip"
+    }
+  },
+  {
+    "_id": "id_1793899511449_22y8jm",
+    "createdAt": "2026-11-05T17:25:11.449Z",
+    "updatedAt": "2026-11-05T17:25:11.449Z",
+    "userId": "id_1793870527588_kwms95",
+    "fieldId": "id_1793892864977_lmu1o3",
+    "fieldName": "Centre",
+    "fieldAreaHectare": 0.43,
+    "soilType": "Silt",
+    "cropGrowthStage": "Vegetative",
+    "season": "Zaid",
+    "advisoryType": "water",
+    "irrigationPrediction": {
+      "irrigation_need": "Low",
+      "confidence": 0.929,
+      "confidence_percentage": 92.9,
+      "probabilities": {
+        "High": 0,
+        "Low": 0.929,
+        "Medium": 0.071
+      }
+    },
+    "waterAdvisory": {
+      "irrigation_need": "Low",
+      "irrigation_required": false,
+      "urgency": "No immediate irrigation needed",
+      "description": "Soil moisture is adequate. Monitor conditions and irrigate when moisture drops below threshold.",
+      "recommended_depth_mm": 0,
+      "total_water_litres": 0,
+      "frequency": "Check again in 7–10 days",
+      "field_area_ha": 0.43,
+      "confidence": 0.929,
+      "confidence_percentage": 92.9,
+      "ml_source": "sugarcane_v2_model",
+      "weather_used": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      },
+      "important_notes": [
+        "Irrigate during early morning or evening to reduce evaporation.",
+        "Adjust irrigation based on rainfall received.",
+        "Monitor soil moisture with a tensiometer for precision irrigation."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_ph": 7.328,
+          "soil_moisture": 52.093,
+          "electrical_conductivity": 1.708
+        },
+        "details": {
+          "soil_ph": {
+            "filteredValue": 7.328,
+            "rawMean": 7.322,
+            "rawValues": [
+              7.25,
+              7.22,
+              7.25,
+              7.42,
+              7.47
+            ],
+            "filteredSteps": [
+              7.25,
+              7.236,
+              7.241,
+              7.287,
+              7.328
+            ],
+            "noiseReductionPct": 88.4,
+            "history": [
+              {
+                "measurement": 7.25,
+                "estimate": 7.25,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 7.22,
+                "estimate": 7.2361,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 7.25,
+                "estimate": 7.2407,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 7.42,
+                "estimate": 7.2874,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 7.47,
+                "estimate": 7.328,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "soil_moisture": {
+            "filteredValue": 52.093,
+            "rawMean": 52.134,
+            "rawValues": [
+              52.07,
+              52.9,
+              52.3,
+              52.3,
+              51.1
+            ],
+            "filteredSteps": [
+              52.07,
+              52.453,
+              52.403,
+              52.376,
+              52.093
+            ],
+            "noiseReductionPct": 92.2,
+            "history": [
+              {
+                "measurement": 52.07,
+                "estimate": 52.07,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 52.9,
+                "estimate": 52.4535,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 52.3,
+                "estimate": 52.4032,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 52.3,
+                "estimate": 52.3763,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 51.1,
+                "estimate": 52.0928,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 1.708,
+            "rawMean": 1.708,
+            "rawValues": [
+              1.72,
+              1.71,
+              1.7,
+              1.72,
+              1.69
+            ],
+            "filteredSteps": [
+              1.72,
+              1.715,
+              1.71,
+              1.713,
+              1.708
+            ],
+            "noiseReductionPct": 87,
+            "history": [
+              {
+                "measurement": 1.72,
+                "estimate": 1.72,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 1.71,
+                "estimate": 1.7154,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 1.7,
+                "estimate": 1.7103,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 1.72,
+                "estimate": 1.7129,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 1.69,
+                "estimate": 1.7078,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Silt",
+      "soil_ph": 7.328,
+      "soil_moisture": 52.093,
+      "electrical_conductivity": 1.708,
+      "temperature_c": 24.5,
+      "humidity": 48,
+      "wind_speed_kmh": 7.1,
+      "irrigation_type": "Rainfed",
+      "season": "Zaid",
+      "crop_growth_stage": "Vegetative"
+    },
+    "metadata": {
+      "fieldName": "Centre",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Silt",
+      "fieldAreaHectare": 0.43,
+      "irrigationType": "Rainfed",
+      "weather": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      }
+    }
+  },
+  {
+    "_id": "id_1793899426949_69b2ye",
+    "createdAt": "2026-11-05T17:23:46.949Z",
+    "updatedAt": "2026-11-05T17:23:46.949Z",
+    "userId": "id_1793892646587_va997a",
+    "fieldId": "id_1793899294446_w6xbf5",
+    "fieldName": "West",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Clay",
+    "cropGrowthStage": "Sowing",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "DAP",
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "probabilities": {
+        "Compost": 0,
+        "DAP": 1,
+        "MOP": 0,
+        "NPK": 0,
+        "SSP": 0,
+        "Urea": 0,
+        "Zinc Sulphate": 0
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "DAP",
+      "nutrient_supplied": "Nitrogen + Phosphorus (N-P)",
+      "description": "Di-Ammonium Phosphate (18-46-0) supplies both nitrogen and phosphorus. Ideal for basal application before planting or early growth.",
+      "application_instructions": "Apply at the base of the plant. Mix into soil during field preparation.",
+      "dosage_kg_per_ha": 80,
+      "total_dosage_kg": 120,
+      "field_area_ha": 1.5,
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 33.85,
+          "electrical_conductivity": 0.516,
+          "nitrogen_level": 78.445,
+          "phosphorus_level": 10.158,
+          "potassium_level": 80.854
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 33.85,
+            "rawMean": 33.74,
+            "rawValues": [
+              45,
+              30.9,
+              30.7,
+              31.5,
+              30.6
+            ],
+            "filteredSteps": [
+              45,
+              38.485,
+              35.935,
+              34.779,
+              33.85
+            ],
+            "noiseReductionPct": 49.5,
+            "history": [
+              {
+                "measurement": 45,
+                "estimate": 45,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 30.9,
+                "estimate": 38.4846,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 30.7,
+                "estimate": 35.9348,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 31.5,
+                "estimate": 34.7789,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 30.6,
+                "estimate": 33.8504,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 0.516,
+            "rawMean": 0.516,
+            "rawValues": [
+              0.508,
+              0.51,
+              0.52,
+              0.52,
+              0.52
+            ],
+            "filteredSteps": [
+              0.508,
+              0.509,
+              0.513,
+              0.514,
+              0.516
+            ],
+            "noiseReductionPct": 68.8,
+            "history": [
+              {
+                "measurement": 0.508,
+                "estimate": 0.508,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.51,
+                "estimate": 0.5089,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5126,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5145,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5157,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 78.445,
+            "rawMean": 77.34,
+            "rawValues": [
+              180,
+              50,
+              51.1,
+              52.5,
+              53.1
+            ],
+            "filteredSteps": [
+              180,
+              119.929,
+              97.385,
+              85.685,
+              78.445
+            ],
+            "noiseReductionPct": 49,
+            "history": [
+              {
+                "measurement": 180,
+                "estimate": 180,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 50,
+                "estimate": 119.9291,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 51.1,
+                "estimate": 97.3846,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 52.5,
+                "estimate": 85.6854,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 53.1,
+                "estimate": 78.4454,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 10.158,
+            "rawMean": 9.96,
+            "rawValues": [
+              30,
+              5,
+              5,
+              4.9,
+              4.9
+            ],
+            "filteredSteps": [
+              30,
+              18.448,
+              14.043,
+              11.66,
+              10.158
+            ],
+            "noiseReductionPct": 49.2,
+            "history": [
+              {
+                "measurement": 30,
+                "estimate": 30,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 5,
+                "estimate": 18.4479,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 5,
+                "estimate": 14.0431,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 4.9,
+                "estimate": 11.66,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 4.9,
+                "estimate": 10.158,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 80.854,
+            "rawMean": 79.7,
+            "rawValues": [
+              200,
+              51,
+              49.7,
+              49.1,
+              48.7
+            ],
+            "filteredSteps": [
+              200,
+              131.149,
+              104.471,
+              90.039,
+              80.854
+            ],
+            "noiseReductionPct": 49.2,
+            "history": [
+              {
+                "measurement": 200,
+                "estimate": 200,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 51,
+                "estimate": 131.1495,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 49.7,
+                "estimate": 104.4713,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 49.1,
+                "estimate": 90.0387,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 48.7,
+                "estimate": 80.8539,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_moisture": 33.85,
+      "electrical_conductivity": 0.516,
+      "nitrogen_level": 78.445,
+      "phosphorus_level": 10.158,
+      "potassium_level": 80.854,
+      "temperature": 25,
+      "humidity": 45,
+      "irrigation_type": "Drip"
+    },
+    "metadata": {
+      "fieldName": "West",
+      "cropGrowthStage": "Sowing",
+      "soilType": "Clay",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip"
+    }
+  },
+  {
+    "_id": "id_1793899341684_su6jig",
+    "createdAt": "2026-11-05T17:22:21.684Z",
+    "updatedAt": "2026-11-05T17:22:21.684Z",
+    "userId": "id_1793892646587_va997a",
+    "fieldId": "id_1793899294446_w6xbf5",
+    "fieldName": "West",
+    "fieldAreaHectare": 1.5,
+    "soilType": "Clay",
+    "cropGrowthStage": "Sowing",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "Urea",
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "probabilities": {
+        "Compost": 0,
+        "DAP": 0,
+        "MOP": 0,
+        "NPK": 0,
+        "SSP": 0,
+        "Urea": 1,
+        "Zinc Sulphate": 0
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "Urea",
+      "nutrient_supplied": "Nitrogen (N)",
+      "description": "Urea is a high-nitrogen fertilizer (46% N). Best for vegetative and grand growth stages when the crop needs active canopy development.",
+      "application_instructions": "Broadcast or dissolve in irrigation water. Split into 2-3 applications. Avoid applying just before heavy rain.",
+      "dosage_kg_per_ha": 100,
+      "total_dosage_kg": 150,
+      "field_area_ha": 1.5,
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 30.73,
+          "electrical_conductivity": 0.514,
+          "nitrogen_level": 51.403,
+          "phosphorus_level": 4.958,
+          "potassium_level": 49.651
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 30.73,
+            "rawMean": 30.74,
+            "rawValues": [
+              30,
+              30.9,
+              30.7,
+              31.5,
+              30.6
+            ],
+            "filteredSteps": [
+              30,
+              30.416,
+              30.509,
+              30.767,
+              30.73
+            ],
+            "noiseReductionPct": 67.5,
+            "history": [
+              {
+                "measurement": 30,
+                "estimate": 30,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 30.9,
+                "estimate": 30.4159,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 30.7,
+                "estimate": 30.5089,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 31.5,
+                "estimate": 30.7673,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 30.6,
+                "estimate": 30.7301,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 0.514,
+            "rawMean": 0.514,
+            "rawValues": [
+              0.5,
+              0.51,
+              0.52,
+              0.52,
+              0.52
+            ],
+            "filteredSteps": [
+              0.5,
+              0.505,
+              0.51,
+              0.512,
+              0.514
+            ],
+            "noiseReductionPct": 57.8,
+            "history": [
+              {
+                "measurement": 0.5,
+                "estimate": 0.5,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.51,
+                "estimate": 0.5046,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5097,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5124,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.52,
+                "estimate": 0.5141,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 51.403,
+            "rawMean": 51.34,
+            "rawValues": [
+              50,
+              50,
+              51.1,
+              52.5,
+              53.1
+            ],
+            "filteredSteps": [
+              50,
+              50,
+              50.36,
+              50.918,
+              51.403
+            ],
+            "noiseReductionPct": 81.4,
+            "history": [
+              {
+                "measurement": 50,
+                "estimate": 50,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 50,
+                "estimate": 50,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 51.1,
+                "estimate": 50.3603,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 52.5,
+                "estimate": 50.918,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 53.1,
+                "estimate": 51.4028,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 4.958,
+            "rawMean": 4.96,
+            "rawValues": [
+              5,
+              5,
+              5,
+              4.9,
+              4.9
+            ],
+            "filteredSteps": [
+              5,
+              5,
+              5,
+              4.974,
+              4.957
+            ],
+            "noiseReductionPct": 87.1,
+            "history": [
+              {
+                "measurement": 5,
+                "estimate": 5,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 5,
+                "estimate": 5,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 5,
+                "estimate": 5,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 4.9,
+                "estimate": 4.9739,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 4.9,
+                "estimate": 4.9575,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 49.651,
+            "rawMean": 49.7,
+            "rawValues": [
+              50,
+              51,
+              49.7,
+              49.1,
+              48.7
+            ],
+            "filteredSteps": [
+              50,
+              50.462,
+              50.212,
+              49.922,
+              49.651
+            ],
+            "noiseReductionPct": 88.1,
+            "history": [
+              {
+                "measurement": 50,
+                "estimate": 50,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 51,
+                "estimate": 50.4621,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 49.7,
+                "estimate": 50.2125,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 49.1,
+                "estimate": 49.9225,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 48.7,
+                "estimate": 49.6509,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_moisture": 30.73,
+      "electrical_conductivity": 0.514,
+      "nitrogen_level": 51.403,
+      "phosphorus_level": 4.958,
+      "potassium_level": 49.651,
+      "temperature": 25,
+      "humidity": 45,
+      "irrigation_type": "Drip"
+    },
+    "metadata": {
+      "fieldName": "West",
+      "cropGrowthStage": "Sowing",
+      "soilType": "Clay",
+      "fieldAreaHectare": 1.5,
+      "irrigationType": "Drip"
+    }
+  },
+  {
+    "_id": "id_1793899305146_ydl3wp",
+    "createdAt": "2026-11-05T17:21:45.146Z",
+    "updatedAt": "2026-11-05T17:21:45.146Z",
+    "userId": "id_1793870527588_kwms95",
+    "fieldId": "id_1793892864977_lmu1o3",
+    "fieldName": "Centre",
+    "fieldAreaHectare": 0.43,
+    "soilType": "Clay",
+    "cropGrowthStage": "Vegetative",
+    "season": "Kharif",
+    "advisoryType": "water",
+    "irrigationPrediction": {
+      "irrigation_need": "Low",
+      "confidence": 0.7919,
+      "confidence_percentage": 79.2,
+      "probabilities": {
+        "High": 0.0142,
+        "Low": 0.7919,
+        "Medium": 0.194
+      }
+    },
+    "waterAdvisory": {
+      "irrigation_need": "Low",
+      "irrigation_required": false,
+      "urgency": "No immediate irrigation needed",
+      "description": "Soil moisture is adequate. Monitor conditions and irrigate when moisture drops below threshold.",
+      "recommended_depth_mm": 0,
+      "total_water_litres": 0,
+      "frequency": "Check again in 7–10 days",
+      "field_area_ha": 0.43,
+      "confidence": 0.7919,
+      "confidence_percentage": 79.2,
+      "ml_source": "sugarcane_v2_model",
+      "weather_used": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      },
+      "important_notes": [
+        "Irrigate during early morning or evening to reduce evaporation.",
+        "Adjust irrigation based on rainfall received.",
+        "Monitor soil moisture with a tensiometer for precision irrigation."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_ph": 6.605,
+          "soil_moisture": 65.803,
+          "electrical_conductivity": 3.278
+        },
+        "details": {
+          "soil_ph": {
+            "filteredValue": 6.605,
+            "rawMean": 6.606,
+            "rawValues": [
+              6.62,
+              6.57,
+              6.69,
+              6.56,
+              6.59
+            ],
+            "filteredSteps": [
+              6.62,
+              6.597,
+              6.627,
+              6.61,
+              6.605
+            ],
+            "noiseReductionPct": 94.7,
+            "history": [
+              {
+                "measurement": 6.62,
+                "estimate": 6.62,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 6.57,
+                "estimate": 6.5969,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 6.69,
+                "estimate": 6.6274,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 6.56,
+                "estimate": 6.6098,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 6.59,
+                "estimate": 6.6054,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "soil_moisture": {
+            "filteredValue": 65.803,
+            "rawMean": 65.742,
+            "rawValues": [
+              64.11,
+              65.3,
+              64.8,
+              66.4,
+              68.1
+            ],
+            "filteredSteps": [
+              64.11,
+              64.66,
+              64.706,
+              65.147,
+              65.803
+            ],
+            "noiseReductionPct": 83.6,
+            "history": [
+              {
+                "measurement": 64.11,
+                "estimate": 64.11,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 65.3,
+                "estimate": 64.6599,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 64.8,
+                "estimate": 64.7058,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 66.4,
+                "estimate": 65.1474,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 68.1,
+                "estimate": 65.8034,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 3.278,
+            "rawMean": 3.28,
+            "rawValues": [
+              3.25,
+              3.33,
+              3.28,
+              3.31,
+              3.23
+            ],
+            "filteredSteps": [
+              3.25,
+              3.287,
+              3.285,
+              3.291,
+              3.278
+            ],
+            "noiseReductionPct": 84,
+            "history": [
+              {
+                "measurement": 3.25,
+                "estimate": 3.25,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 3.33,
+                "estimate": 3.287,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 3.28,
+                "estimate": 3.2847,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 3.31,
+                "estimate": 3.2913,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 3.23,
+                "estimate": 3.2777,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Clay",
+      "soil_ph": 6.605,
+      "soil_moisture": 65.803,
+      "electrical_conductivity": 3.278,
+      "temperature_c": 24.5,
+      "humidity": 48,
+      "wind_speed_kmh": 7.1,
+      "irrigation_type": "Sprinkler",
+      "season": "Kharif",
+      "crop_growth_stage": "Vegetative"
+    },
+    "metadata": {
+      "fieldName": "Centre",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Clay",
+      "fieldAreaHectare": 0.43,
+      "irrigationType": "Sprinkler",
+      "weather": {
+        "temperature_c": 24.5,
+        "humidity": 48,
+        "wind_speed_kmh": 7.1
+      }
+    }
+  },
+  {
+    "_id": "id_1793893934346_4335gr",
+    "createdAt": "2026-11-05T15:52:14.346Z",
+    "updatedAt": "2026-11-05T15:52:14.346Z",
+    "userId": "id_1793870527588_kwms95",
+    "fieldId": "id_1793892864977_lmu1o3",
+    "fieldName": "Centre",
+    "fieldAreaHectare": 0.43,
+    "soilType": "Silt",
+    "cropGrowthStage": "Vegetative",
+    "advisoryType": "fertilizer",
+    "fertilizerPrediction": {
+      "recommended_fertilizer": "Urea",
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "probabilities": {
+        "Compost": 0,
+        "DAP": 0,
+        "MOP": 0,
+        "NPK": 0,
+        "SSP": 0,
+        "Urea": 1,
+        "Zinc Sulphate": 0
+      }
+    },
+    "fertilizerAdvisory": {
+      "recommended_fertilizer": "Urea",
+      "nutrient_supplied": "Nitrogen (N)",
+      "description": "Urea is a high-nitrogen fertilizer (46% N). Best for vegetative and grand growth stages when the crop needs active canopy development.",
+      "application_instructions": "Broadcast or dissolve in irrigation water. Split into 2-3 applications. Avoid applying just before heavy rain.",
+      "dosage_kg_per_ha": 100,
+      "total_dosage_kg": 43,
+      "field_area_ha": 0.43,
+      "confidence": 1,
+      "confidence_percentage": 100,
+      "ml_source": "sugarcane_v2_model",
+      "important_notes": [
+        "Always conduct a full soil test before applying fertilizers.",
+        "Split applications reduce nutrient loss and improve uptake.",
+        "Follow local ICAR recommendations for your specific region."
+      ],
+      "kalman_filter": {
+        "filteredParameters": {
+          "soil_moisture": 33.329,
+          "electrical_conductivity": 0.664,
+          "nitrogen_level": 47.951,
+          "phosphorus_level": 15.451,
+          "potassium_level": 69.374
+        },
+        "details": {
+          "soil_moisture": {
+            "filteredValue": 33.329,
+            "rawMean": 33.338,
+            "rawValues": [
+              33.49,
+              33.8,
+              33.2,
+              32.9,
+              33.3
+            ],
+            "filteredSteps": [
+              33.49,
+              33.633,
+              33.491,
+              33.337,
+              33.329
+            ],
+            "noiseReductionPct": 85.7,
+            "history": [
+              {
+                "measurement": 33.49,
+                "estimate": 33.49,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 33.8,
+                "estimate": 33.6332,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 33.2,
+                "estimate": 33.4913,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 32.9,
+                "estimate": 33.3372,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 33.3,
+                "estimate": 33.3289,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "electrical_conductivity": {
+            "filteredValue": 0.664,
+            "rawMean": 0.664,
+            "rawValues": [
+              0.67,
+              0.67,
+              0.67,
+              0.66,
+              0.65
+            ],
+            "filteredSteps": [
+              0.67,
+              0.67,
+              0.67,
+              0.667,
+              0.663
+            ],
+            "noiseReductionPct": 89.9,
+            "history": [
+              {
+                "measurement": 0.67,
+                "estimate": 0.67,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 0.67,
+                "estimate": 0.67,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 0.67,
+                "estimate": 0.67,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 0.66,
+                "estimate": 0.6674,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 0.65,
+                "estimate": 0.6635,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "nitrogen_level": {
+            "filteredValue": 47.951,
+            "rawMean": 47.98,
+            "rawValues": [
+              49,
+              48.8,
+              47.3,
+              48.1,
+              46.7
+            ],
+            "filteredSteps": [
+              49,
+              48.908,
+              48.381,
+              48.308,
+              47.951
+            ],
+            "noiseReductionPct": 79.9,
+            "history": [
+              {
+                "measurement": 49,
+                "estimate": 49,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 48.8,
+                "estimate": 48.9076,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 47.3,
+                "estimate": 48.381,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 48.1,
+                "estimate": 48.3078,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 46.7,
+                "estimate": 47.9506,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "phosphorus_level": {
+            "filteredValue": 15.451,
+            "rawMean": 15.44,
+            "rawValues": [
+              15,
+              15.3,
+              15.4,
+              15.6,
+              15.9
+            ],
+            "filteredSteps": [
+              15,
+              15.139,
+              15.224,
+              15.322,
+              15.451
+            ],
+            "noiseReductionPct": 73.8,
+            "history": [
+              {
+                "measurement": 15,
+                "estimate": 15,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 15.3,
+                "estimate": 15.1386,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 15.4,
+                "estimate": 15.2242,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 15.6,
+                "estimate": 15.3222,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 15.9,
+                "estimate": 15.4506,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          },
+          "potassium_level": {
+            "filteredValue": 69.374,
+            "rawMean": 69.4,
+            "rawValues": [
+              71,
+              70.2,
+              69,
+              68.5,
+              68.3
+            ],
+            "filteredSteps": [
+              71,
+              70.63,
+              70.096,
+              69.68,
+              69.374
+            ],
+            "noiseReductionPct": 66.9,
+            "history": [
+              {
+                "measurement": 71,
+                "estimate": 71,
+                "kalmanGain": 0.834,
+                "errorCovariance": 0.166805
+              },
+              {
+                "measurement": 70.2,
+                "estimate": 70.6303,
+                "kalmanGain": 0.4621,
+                "errorCovariance": 0.092417
+              },
+              {
+                "measurement": 69,
+                "estimate": 70.0963,
+                "kalmanGain": 0.3275,
+                "errorCovariance": 0.065509
+              },
+              {
+                "measurement": 68.5,
+                "estimate": 69.6802,
+                "kalmanGain": 0.2607,
+                "errorCovariance": 0.05213
+              },
+              {
+                "measurement": 68.3,
+                "estimate": 69.3736,
+                "kalmanGain": 0.2222,
+                "errorCovariance": 0.044437
+              }
+            ]
+          }
+        },
+        "readingCount": 5
+      }
+    },
+    "input": {
+      "soil_type": "Silt",
+      "soil_moisture": 33.329,
+      "electrical_conductivity": 0.664,
+      "nitrogen_level": 47.951,
+      "phosphorus_level": 15.451,
+      "potassium_level": 69.374,
+      "temperature": 25.4,
+      "humidity": 44,
+      "irrigation_type": "Rainfed"
+    },
+    "metadata": {
+      "fieldName": "Centre",
+      "cropGrowthStage": "Vegetative",
+      "soilType": "Silt",
+      "fieldAreaHectare": 0.43,
+      "irrigationType": "Rainfed"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "id_1793900611354_hve0se",
+    "createdAt": "2026-11-05T17:43:31.354Z",
+    "updatedAt": "2026-11-05T17:43:31.354Z",
+    "name": "Pranita Ravindra Deshmukh",
+    "email": "pranitadeshmukh4747@gmail.com",
+    "password": "$2a$10$BEqEIb31Q.nW.LOAdPYTj.gQeEM9yqEUdBvjYnefBfjRdN3L4jQsu",
+    "phone": "9309147473",
+    "region": "South"
+  },
+  {
+    "_id": "id_1793892646587_va997a",
+    "createdAt": "2026-11-05T15:30:46.587Z",
+    "updatedAt": "2026-11-05T15:30:46.587Z",
+    "name": "Aditya Hingane",
+    "email": "adityahingane69@gmail.com",
+    "password": "$2a$10$Wm9b7WC4n/qUzaBmP4VOMebswidSF/1O.h22zhu.rwILUcSM3agyS",
+    "phone": "8180029752",
+    "region": "South"
+  },
+  {
+    "_id": "id_1793870527588_kwms95",
+    "createdAt": "2026-11-05T09:22:07.588Z",
+    "updatedAt": "2026-11-05T09:22:07.588Z",
+    "name": "Yash Kanawade",
+    "email": "yashkanawade66@gmail.com",
+    "password": "$2a$10$dcJ0lqJpoG7KDzPpchT2leT3oUp0Dtz4AkIvOmZ1AyFWuzYBHXrz2",
+    "phone": "8767476439",
+    "region": "South"
+  }
+]
