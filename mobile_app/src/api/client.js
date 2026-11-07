@@ -3,21 +3,29 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 
 const DEFAULT_HOST_IP = '192.168.43.46';
+
 const STORAGE_KEY_BASE_URL = '@smart_cane_api_base_url';
 const STORAGE_KEY_AUTH_TOKEN = '@smart_cane_auth_token';
 const STORAGE_KEY_USER = '@smart_cane_user';
 
+// Environment URLs
+const configuredApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
+const configuredNgrokUrl = process.env.EXPO_PUBLIC_NGROK_URL?.trim();
+
+const configuredApiHost = process.env.EXPO_PUBLIC_API_HOST?.trim();
+
 const expoHostUri = Constants.expoConfig?.hostUri
   || Constants.manifest2?.extra?.expoClient?.hostUri
   || Constants.manifest?.debuggerHost;
+
 const expoHost = expoHostUri?.split(':')[0];
-const configuredApiUrl = 'https://entire-antibody-devourer.ngrok-free.dev';
-const configuredApiHost = process.env.EXPO_PUBLIC_API_HOST?.trim();
+
 const webHost = Platform.OS === 'web' && typeof window !== 'undefined'
   ? window.location.hostname
   : null;
 
-let API_BASE_URL = configuredApiUrl || (
+// Render is the default, ngrok is the fallback
+let API_BASE_URL = configuredApiUrl || configuredNgrokUrl || (
   Platform.OS === 'web'
     ? `http://${webHost || 'localhost'}:5000`
     : `http://${configuredApiHost || expoHost || DEFAULT_HOST_IP}:5000`
