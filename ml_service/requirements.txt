@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fastapi>=0.110.0
 uvicorn>=0.28.0
 scikit-learn>=1.8.0
@@ -8,3 +9,15 @@ numpy>=1.26.0
 pydantic>=2.6.0
 python-multipart>=0.0.9
 
+=======
+fastapi==0.135.1
+uvicorn==0.41.0
+scikit-learn==1.8.0
+pandas==3.0.1
+openpyxl==3.1.5
+joblib==1.5.3
+numpy==2.4.3
+scipy==1.17.1
+pydantic==2.12.5
+python-multipart==0.0.22
+>>>>>>> 63e5d49 (Pin ML service dependencies)
