@@ -17,22 +17,32 @@
     "android": {
       "package": "com.smartcane.app",
       "versionCode": 1,
+      "usesCleartextTraffic": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#063F2C"
       },
       "permissions": [
         "INTERNET",
-        "ACCESS_NETWORK_STATE"
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
       ]
     },
     "web": {
       "bundler": "metro"
     },
     "plugins": [
-      "expo-status-bar"
+      "expo-status-bar",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Smart Cane to use your location to provide accurate weather and farm advisories."
+        }
+      ]
     ],
     "extra": {
+      "apiUrl": "https://smart-cane-backend.onrender.com",
       "eas": {
         "projectId": "505dbe65-f1ca-435b-ada4-9d81f624e864"
       }

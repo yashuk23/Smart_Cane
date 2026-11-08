@@ -2,35 +2,58 @@ import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 
-const DEFAULT_HOST_IP = '192.168.43.46';
+export const PRODUCTION_API_URL = 'https://smart-cane-backend.onrender.com';
 
 const STORAGE_KEY_BASE_URL = '@smart_cane_api_base_url';
 const STORAGE_KEY_AUTH_TOKEN = '@smart_cane_auth_token';
 const STORAGE_KEY_USER = '@smart_cane_user';
 
-// Environment URLs
-const configuredApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
-const configuredNgrokUrl = process.env.EXPO_PUBLIC_NGROK_URL?.trim();
+/**
+ * Resolves the initial backend API Base URL:
+ * 1. process.env.EXPO_PUBLIC_API_URL
+ * 2. Constants.expoConfig?.extra?.apiUrl
+ * 3. process.env.EXPO_PUBLIC_NGROK_URL
+ * 4. Local dev host / emulator IF in __DEV__ mode
+ * 5. Default production Render URL for standalone APK builds
+ */
+export function resolveDefaultBaseUrl() {
+  const configuredApiUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
+  const configuredNgrokUrl = process.env.EXPO_PUBLIC_NGROK_URL?.trim();
+  const extraApiUrl = Constants.expoConfig?.extra?.apiUrl?.trim();
 
-const configuredApiHost = process.env.EXPO_PUBLIC_API_HOST?.trim();
+  // If valid production URL or explicit public URL is provided
+  if (configuredApiUrl && !configuredApiUrl.includes('your-ngrok-url')) {
+    return configuredApiUrl.replace(/\/$/, '');
+  }
 
-const expoHostUri = Constants.expoConfig?.hostUri
-  || Constants.manifest2?.extra?.expoClient?.hostUri
-  || Constants.manifest?.debuggerHost;
+  if (extraApiUrl) {
+    return extraApiUrl.replace(/\/$/, '');
+  }
 
-const expoHost = expoHostUri?.split(':')[0];
+  if (configuredNgrokUrl && !configuredNgrokUrl.includes('your-ngrok-url')) {
+    return configuredNgrokUrl.replace(/\/$/, '');
+  }
 
-const webHost = Platform.OS === 'web' && typeof window !== 'undefined'
-  ? window.location.hostname
-  : null;
+  // Development mode local fallback (Expo Go / local emulator)
+  if (__DEV__) {
+    if (Platform.OS === 'web' && typeof window !== 'undefined') {
+      const webHost = window.location.hostname || 'localhost';
+      return `http://${webHost}:5000`;
+    }
+    const configuredApiHost = process.env.EXPO_PUBLIC_API_HOST?.trim();
+    const expoHostUri = Constants.expoConfig?.hostUri
+      || Constants.manifest2?.extra?.expoClient?.hostUri
+      || Constants.manifest?.debuggerHost;
+    const expoHost = expoHostUri?.split(':')[0];
+    const devHost = configuredApiHost || expoHost || '10.0.2.2';
+    return `http://${devHost}:5000`;
+  }
 
-// Render is the default, ngrok is the fallback
-let API_BASE_URL = configuredApiUrl || configuredNgrokUrl || (
-  Platform.OS === 'web'
-    ? `http://${webHost || 'localhost'}:5000`
-    : `http://${configuredApiHost || expoHost || DEFAULT_HOST_IP}:5000`
-);
+  // Default for production APK builds
+  return PRODUCTION_API_URL;
+}
 
+let API_BASE_URL = resolveDefaultBaseUrl();
 let authToken = null;
 let onAuthExpiredCallback = null;
 
@@ -43,8 +66,20 @@ export async function initApiClient() {
   try {
     const savedUrl = await AsyncStorage.getItem(STORAGE_KEY_BASE_URL);
     if (savedUrl) {
-      API_BASE_URL = savedUrl.trim().replace(/\/$/, '');
+      const cleanedUrl = savedUrl.trim().replace(/\/$/, '');
+      // Purge any stale local development URLs (e.g. 192.168.x.x, localhost, or unencrypted http) if running in production
+      const isStaleLocalUrl = cleanedUrl.includes('192.168.') || cleanedUrl.includes('localhost') || cleanedUrl.includes('10.0.2.2') || cleanedUrl.startsWith('http://');
+      if (!__DEV__ && isStaleLocalUrl) {
+        console.log('[API Client] Purging stale local development URL from cache in production APK:', cleanedUrl);
+        await AsyncStorage.removeItem(STORAGE_KEY_BASE_URL);
+        API_BASE_URL = resolveDefaultBaseUrl();
+      } else {
+        API_BASE_URL = cleanedUrl;
+      }
+    } else {
+      API_BASE_URL = resolveDefaultBaseUrl();
     }
+
     const savedToken = await AsyncStorage.getItem(STORAGE_KEY_AUTH_TOKEN);
     if (savedToken) {
       authToken = savedToken;
@@ -117,7 +152,7 @@ export async function getStoredUser() {
   }
 }
 
-async function request(endpoint, options = {}, timeoutMs = 8000) {
+async function request(endpoint, options = {}, timeoutMs = 30000) {
   const url = `${API_BASE_URL}${endpoint}`;
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
@@ -159,14 +194,14 @@ async function request(endpoint, options = {}, timeoutMs = 8000) {
     clearTimeout(timeoutId);
     if (err.name === 'AbortError') {
       console.warn('[API Client] Timeout reaching', API_BASE_URL);
-      const timeoutError = new Error('This is taking too long. Please check your internet connection and try again.');
+      const timeoutError = new Error('The server is taking longer than usual to respond (it may be waking up from sleep). Please try again in a moment.');
       timeoutError.isTimeout = true;
       throw timeoutError;
     }
-    // Network failure (offline, refused connection)
-    if (err.message && err.message.includes('Network request failed')) {
-      console.warn('[API Client] Network failure reaching', API_BASE_URL);
-      const netErr = new Error('Could not connect right now. Please check your internet connection and try again.');
+    // Network failure (offline, refused connection, cleartext blocked)
+    if (err.message && (err.message.includes('Network request failed') || err.message.includes('fetch failed'))) {
+      console.warn('[API Client] Network failure reaching', API_BASE_URL, err.message);
+      const netErr = new Error('Could not connect to the Smart Cane server. Please check your internet connection and try again.');
       netErr.isNetworkError = true;
       throw netErr;
     }
@@ -179,7 +214,7 @@ export const api = {
   login: (email, password) => request('/api/auth/login', {
     method: 'POST',
     body: JSON.stringify({ email: email.trim().toLowerCase(), password })
-  }),
+  }, 35000),
   register: (userData) => request('/api/auth/register', {
     method: 'POST',
     body: JSON.stringify({
@@ -189,7 +224,7 @@ export const api = {
       phone: userData.phone?.trim() || '',
       region: userData.region?.trim() || 'South'
     })
-  }),
+  }, 35000),
   getProfile: () => request('/api/auth/profile'),
   updateProfile: (data) => request('/api/auth/profile', { method: 'PUT', body: JSON.stringify(data) }),
 
@@ -216,7 +251,7 @@ export const api = {
   runAnalysis: (payload) => request('/api/analysis/analyze', {
     method: 'POST',
     body: JSON.stringify(payload)
-  }, 12000), // slightly higher timeout for ML analysis
+  }, 45000), // Render free tier cold-start + ML processing
 
   // History & Reports
   getHistory: () => request('/api/history'),
@@ -226,18 +261,18 @@ export const api = {
   exportSessionUrl: (id, format = 'csv') => `${API_BASE_URL}/api/history/${id}/export?format=${format}`,
 
   // Health probe
-  checkHealth: () => request('/health', {}, 4000),
+  checkHealth: () => request('/health', {}, 15000),
 
   // Recommendation modules (independent – fertilizer uses 9 params, water uses 10)
   getFertilizerRecommendation: (payload) => request('/api/recommendations/fertilizer', {
     method: 'POST',
     body: JSON.stringify(payload)
-  }, 15000),
+  }, 45000),
   getWaterRecommendation: (payload) => request('/api/recommendations/water', {
     method: 'POST',
     body: JSON.stringify(payload)
-  }, 15000),
+  }, 45000),
 
   // Live weather
-  getWeather: (latitude, longitude) => request(`/api/weather/current?latitude=${latitude}&longitude=${longitude}`, {}, 10000),
+  getWeather: (latitude, longitude) => request(`/api/weather/current?latitude=${latitude}&longitude=${longitude}`, {}, 15000),
 };

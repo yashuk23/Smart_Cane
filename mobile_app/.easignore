@@ -1,0 +1,8 @@
+# EAS Ignore Configuration for Smart Cane Mobile
+node_modules/
+.expo/
+.expo-shared/
+web-build/
+*.log
+.DS_Store
+Thumbs.db

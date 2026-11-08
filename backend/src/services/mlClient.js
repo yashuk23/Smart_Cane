@@ -10,7 +10,7 @@ async function fetchFromML(endpoint, body) {
   const url = `${ML_SERVICE_URL}${endpoint}`;
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3500);
+    const timeout = setTimeout(() => controller.abort(), 25000);
 
     const res = await fetch(url, {
       method: 'POST',
@@ -92,7 +92,7 @@ async function checkMLServiceHealth() {
   const url = `${ML_SERVICE_URL}/health`;
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 2000);
+    const timeout = setTimeout(() => controller.abort(), 8000);
     const res = await fetch(url, { signal: controller.signal });
     clearTimeout(timeout);
     if (res.ok) {

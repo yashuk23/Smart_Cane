@@ -151,7 +151,8 @@ export function AppProvider({ children }) {
           await clearAuthSession();
           setUser(null);
         }
-        await checkHealth();
+        // Non-blocking health probe so splash screen transitions immediately without waiting on cold starts
+        checkHealth().catch(() => {});
       } catch (e) {
         console.warn('[AppContext] Session restore error:', e);
         setUser(null);
